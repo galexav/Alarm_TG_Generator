@@ -1,8 +1,8 @@
 # ENTER YOUR SITE AND CP NAMES HERE
 ########################################################################################################
-# Declares values for variables used to replace text in 'Alarm_TG_Template.xml'
-site = 'AKR1'  # Replace with the site name
-cp = 'CP01'  # Replace with the CP name
+# Defines values for variables used to replace text in 'Alarm_TG_Template.xml'
+site = 'AKR1'  # Replace value with the site name
+cp = 'CP01'  # Replace value with the CP name
 ########################################################################################################
 
 # Filepaths
@@ -13,8 +13,6 @@ alarm_list_filepath = 'Alarm_List.txt'  # File containing the SCADA alarm names 
 with open(alarm_list_filepath, 'r') as text_file:
     alarm_list = text_file.readlines()
 alarm_list = [item.strip() for item in alarm_list]  # Removes any whitespace from the list items.
-
-text_file.close()
 
 # Defines the replacements in a dictionary.
 replacements = {'Site_Name': site, 'CP_Name': cp}
@@ -34,13 +32,9 @@ for alarm_name in alarm_list:
         # Alarm_TG_Template.xml file with the alarm name from the 'alarm_list'.
         template_content = template_content.replace('Alarm_Name', alarm_name)
 
-    xml_template_file.close()
-
-    # Write the modified content to a new file
+    # Writes the modified content to a new file.
     with open(f'{site}_{cp}_AlmTransGrp.xml', 'a') as xml_import_file:
         xml_import_file.write(template_content)
-
-        xml_import_file.close()
 
 # Adds the <Project> & <Groups> tags to the beginning & end of the file.
 with open(f'{site}_{cp}_AlmTransGrp.xml', 'r') as xml_import_file:
@@ -49,4 +43,9 @@ with open(f'{site}_{cp}_AlmTransGrp.xml', 'r') as xml_import_file:
 with open(f'{site}_{cp}_AlmTransGrp.xml', 'w') as xml_import_file:
     xml_import_file.write(f'<Project><Groups>{text}</Groups></Project>')
 
+# Closes the files.
+xml_template_file.close()
 xml_import_file.close()
+text_file.close()
+
+print(f'Transaction Group import file, {site}_{cp}_AlmTransGrp.xml,has been created for {site}-{cp}.')

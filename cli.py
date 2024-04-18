@@ -29,7 +29,7 @@ for alarm_name in alarm_list:
         template_content = template_content.replace(old_text, new_text)
 
         # Replaces all occurrences of 'Alarm_Name' from the text in the
-        # Alarm_TG_Template.xml file with the alarm name from the 'alarm_list'.
+        # Alarm_TG_Template.xml file with the alarm names from the 'alarm_list'.
         template_content = template_content.replace('Alarm_Name', alarm_name)
 
     # Writes the modified content to a new file.

@@ -1,0 +1,69 @@
+      <GroupConfig typeKey="standard" name="Alarm_Name" path="Alarms/CP1000">
+         <Property name="TABLE_NAME">Alarms</Property>
+         <Property name="OPC_SUBRATE_MS">100</Property>
+         <Property name="DATA_SOURCE">Site_Name_MSSQL</Property>
+         <Property name="TRIGGER_PATH">Site_Name/CP_Name/Alarms/Alarm_Name/Log</Property>
+         <Property name="UPDATE_UNITS">2</Property>
+         <Property name="VALUE_SUBSCRIPTION_MODE">1</Property>
+         <Property name="TRIGGER_MODE">0</Property>
+         <Property name="CONFIGURED_ITEMS" isComplex="true">
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Alarm" typeId="3">
+               <Property name="TARGET_DATA_TYPE">2</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Alarm</Property>
+               <Property name="TARGET_NAME">Alarm</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Alarm End Time" typeId="3">
+               <Property name="TARGET_DATA_TYPE">8</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Alarm End Time</Property>
+               <Property name="TARGET_NAME">Alarm_End_Time</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Alarm Start Time" typeId="3">
+               <Property name="TARGET_DATA_TYPE">8</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Alarm Start Time</Property>
+               <Property name="TARGET_NAME">Alarm_Start_Time</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Class" typeId="3">
+               <Property name="TARGET_DATA_TYPE">7</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Class</Property>
+               <Property name="TARGET_NAME">Class</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Description" typeId="3">
+               <Property name="TARGET_DATA_TYPE">7</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Description</Property>
+               <Property name="TARGET_NAME">Description</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Duration" typeId="3">
+               <Property name="TARGET_DATA_TYPE">4</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Duration</Property>
+               <Property name="TARGET_NAME">Duration</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Location" typeId="3">
+               <Property name="TARGET_DATA_TYPE">7</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Location</Property>
+               <Property name="TARGET_NAME">Location</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Log" typeId="3">
+               <Property name="TARGET_DATA_TYPE">2</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Log</Property>
+               <Property name="TARGET_NAME">Log</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/Store" typeId="3">
+               <Property name="TARGET_DATA_TYPE">2</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/Store</Property>
+               <Property name="TARGET_NAME">Store</Property>
+            </ItemConfig>
+            <ItemConfig name="Site_Name/CP_Name/Alarms/Alarm_Name/TagName" typeId="3">
+               <Property name="TARGET_DATA_TYPE">7</Property>
+               <Property name="DRIVING_TAG_PATH">[default]Site_Name/CP_Name/Alarms/Alarm_Name/TagName</Property>
+               <Property name="TARGET_NAME">TagName</Property>
+            </ItemConfig>
+         </Property>
+         <Property name="EXECUTION_SCHEDULE_MODE">1</Property>
+         <Property name="EXECUTION_ENABLED">true</Property>
+         <Property name="GROUP_EXECUTION_FLAGS">50</Property>
+         <Property name="DELETE_OLD_RECORDS">true</Property>
+         <Property name="DELETE_RECORDS_TIME">90.0</Property>
+         <Property name="USE_OPC_SUBRATE_MS">true</Property>
+         <Property name="STORE_QUALITY">true</Property>
+         <Property name="EXECUTION_SCHEDULE">00:00-59:00</Property>
+      </GroupConfig>

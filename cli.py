@@ -1,8 +1,8 @@
 # ENTER YOUR SITE AND CP NAMES HERE
 ########################################################################################################
 # Defines values for variables used to replace text in 'Alarm_TG_Template.xml'
-site = 'AKR1'  # Replace value with the site name
-cp = 'CP01'  # Replace value with the CP name
+site = 'AKR1'  # Replace value with the site name.
+cp = 'CP01'  # Replace value with the CP name.
 ########################################################################################################
 
 # Filepaths
@@ -42,10 +42,5 @@ with open(f'{site}_{cp}_AlmTransGrp.xml', 'r') as xml_import_file:
 
 with open(f'{site}_{cp}_AlmTransGrp.xml', 'w') as xml_import_file:
     xml_import_file.write(f'<Project>\n<Groups>\n{text}</Groups>\n</Project>')
-
-# Closes the files.
-xml_template_file.close()
-xml_import_file.close()
-text_file.close()
 
 print(f'Transaction Group import file, {site}_{cp}_AlmTransGrp.xml,has been created for {site}-{cp}.')

@@ -20,7 +20,7 @@ replacements = {'Site_Name': site, 'CP_Name': cp}
 # Processes each item in 'alarm_list' list.
 for alarm_name in alarm_list:
     # Reads the template XML file.
-    with open('Alarm_TG_Template.xml', 'r') as xml_template_file:
+    with open(template_filepath, 'r') as xml_template_file:
         template_content = xml_template_file.read()
 
     # Replaces all occurrences of 'Site_Name' and 'CP_Name' from the text in the

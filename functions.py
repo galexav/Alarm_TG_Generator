@@ -1,3 +1,4 @@
+from tkinter import filedialog
 
 
 def alm_tg_generate(alarm_list_filepath, dest_folder, site, cp, db):
@@ -35,3 +36,15 @@ def alm_tg_generate(alarm_list_filepath, dest_folder, site, cp, db):
 
     with open(f'{dest_folder}/{site}_{cp}_AlmTransGrp.xml', 'w') as xml_import_file:
         xml_import_file.write(f'<Project>\n<Groups>\n{text}</Groups>\n</Project>')
+
+
+def open_file_dialog(entry):
+    file_path = filedialog.askopenfilename(filetypes=[('Text Files', '*.txt')])
+    entry.delete(0, tkb.END)
+    entry.insert(0, file_path)
+
+
+def open_folder_dialog(entry):
+    folder_path = filedialog.askdirectory()
+    entry.delete(0, tkb.END)
+    entry.insert(0, folder_path)

@@ -1,20 +1,5 @@
 import ttkbootstrap as tkb
-from tkinter import filedialog
-from tkinter import ttk
-from cli import alm_tg_generate
-
-
-def open_file_dialog(entry):
-    file_path = filedialog.askopenfilename(filetypes=[('Text Files', '*.txt')])
-    entry.delete(0, tkb.END)
-    entry.insert(0, file_path)
-
-
-def open_folder_dialog(entry):
-    folder_path = filedialog.askdirectory()
-    entry.delete(0, tkb.END)
-    entry.insert(0, folder_path)
-
+from functions import *
 
 # Create the main window
 root = tkb.Window(themename="superhero", resizable=(False, False))
@@ -71,10 +56,10 @@ folder_lbl.grid(row=0, column=0, sticky='e', padx=5, pady=5)
 # Submit Button
 
 submit_button = tkb.Button(root, text='Generate', bootstyle="success, outline",
-                           command=lambda: alm_tg_generate(file_entry.get(), folder_entry.get(), site_ent.get(), plc_ent.get(),
+                           command=lambda: alm_tg_generate(file_entry.get(), folder_entry.get(), site_ent.get(),
+                                                           plc_ent.get(),
                                                            db_ent.get()))
 submit_button.pack(side='right', padx=10, pady=5)
-
 
 # Run the main loop
 root.mainloop()

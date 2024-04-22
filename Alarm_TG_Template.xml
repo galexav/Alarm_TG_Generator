@@ -1,7 +1,7 @@
-      <GroupConfig typeKey="standard" name="Alarm_Name" path="Alarms/CP1000">
+      <GroupConfig typeKey="standard" name="Alarm_Name" path="Alarms/CP_Name">
          <Property name="TABLE_NAME">Alarms</Property>
          <Property name="OPC_SUBRATE_MS">100</Property>
-         <Property name="DATA_SOURCE">Site_Name_MSSQL</Property>
+         <Property name="DATA_SOURCE">DB_Name</Property>
          <Property name="TRIGGER_PATH">Site_Name/CP_Name/Alarms/Alarm_Name/Log</Property>
          <Property name="UPDATE_UNITS">2</Property>
          <Property name="VALUE_SUBSCRIPTION_MODE">1</Property>

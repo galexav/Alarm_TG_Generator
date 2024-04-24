@@ -22,19 +22,19 @@ entry_frame.grid(row=0, column=0, sticky='n', padx=10, pady=10, ipady=5)
 site_lbl = tkb.Label(entry_frame, text='Site')
 site_lbl.grid(row=0, column=0, sticky='w', padx=5, pady=5)
 site_ent = tkb.Entry(entry_frame)
-site_ent.grid(row=0, column=1, sticky='e', padx=5, pady=5)
+site_ent.grid(row=0, column=1, sticky='w', padx=5, pady=5)
 
 # PLC name text entry field.
 plc_lbl = tkb.Label(entry_frame, text='PLC')
 plc_lbl.grid(row=1, column=0, sticky='w', padx=5, pady=5)
 plc_ent = tkb.Entry(entry_frame)
-plc_ent.grid(row=1, column=1, sticky='e', padx=5, pady=5)
+plc_ent.grid(row=1, column=1, sticky='w', padx=5, pady=5)
 
 # DB name text entry field.
 db_lbl = tkb.Label(entry_frame, text='DB')
 db_lbl.grid(row=2, column=0, sticky='w', padx=5, pady=5)
 db_ent = tkb.Entry(entry_frame)
-db_ent.grid(row=2, column=1, sticky='e', padx=5, pady=5)
+db_ent.grid(row=2, column=1, sticky='w', padx=5, pady=5)
 
 # Creates a labelframe for file and folder selection.
 path_frame = tkb.LabelFrame(frame_two, text='File Path Selection')
@@ -61,10 +61,9 @@ folder_lbl.grid(row=1, column=0, sticky='e', padx=5, pady=5)
 
 # 'Generate' button.
 gen_button = tkb.Button(frame_two, text='Generate', bootstyle="success, outline",
-                        command=lambda: alm_tg_generate(file_entry.get(), folder_entry.get(), site_ent.get(),
-                                                        plc_ent.get(),
-                                                        db_ent.get()))
-gen_button.grid(row=1, column=0, sticky='e', padx=10, pady=5)
+                        command=lambda: alm_tg_generate(file_entry.get(), folder_entry.get(),
+                                                        site_ent.get(), plc_ent.get(), db_ent.get()))
+gen_button.grid(row=1, column=0, sticky='e', padx=10, pady=5, ipadx=30)
 
 # Run the main loop.
 root.mainloop()
